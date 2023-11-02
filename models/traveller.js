@@ -1,5 +1,5 @@
-const { Module, DataTypes } = require('sequelize');
-const sequelize = requre('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Traveller extends Model {}
 
