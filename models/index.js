@@ -13,11 +13,19 @@ Location.hasMany(Traveller, {
 });
 
 Traveller.belongsToMany(Location, {
-    foreignKey: 'reader_id'
+    through: {
+        model: Trips,
+        unique:false,
+    },
+    as: 'planned_trips'
 });
 
 Location.belongsToMany(Traveller, {
-    foreignKey: 'reader_id'
+    through: {
+        model: Trips,
+        unique:false,
+    },
+    as: 'planned_trips'
 });
 
 module.exports = { Location, Traveller, Trips };
